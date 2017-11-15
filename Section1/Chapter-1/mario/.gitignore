@@ -1,6 +1,9 @@
 # IDE
 *.iml
-*.idea
+.idea
+
+# Gradle
+.gradle
 
 # Archive
 target/
