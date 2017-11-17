@@ -4,7 +4,6 @@ import info.unbelievable9.po.Mario;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 /**
  * Copyright 2017 (C) Unbelievable9
