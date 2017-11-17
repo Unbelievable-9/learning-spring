@@ -10,4 +10,4 @@ Spring Learning Notes
 ## Section 1 Spring into action
 
 ### Chapter 1
-- 在尝试利用 Java Config 配置 AOP 时， 应该注意要在 @Configuration 配置文件中 **同时添加 @EnableAspectJAutoProxy 注解**，否则 AOP 是不会生效的(困扰了我)
+- 在尝试利用 Java Config 配置 AOP 时， 应该注意要在 @Configuration 配置文件中 **同时添加 @EnableAspectJAutoProxy 注解**，否则 AOP 是不会生效的(困扰了我好久！)
