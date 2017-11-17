@@ -5,7 +5,7 @@ Spring Learning Notes
 [Spring in Action, Fourth Edition](https://www.manning.com/books/spring-in-action-fourth-edition)
 
 # 学习笔记
-针对没个章节的 demo 记录学习心得，自己编写的 demo **>=** 书上的 demo。比如书上是用的 XML Config，那么我会去尝试 Java Config。
+针对每个章节的 demo 记录学习心得，自己编写的 demo **>=** 书上的 demo。比如书上是用的 XML Config，那么我会去尝试采用 Java Config。
 
 ## Section 1 Spring into action
 
