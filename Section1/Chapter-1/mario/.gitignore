@@ -5,5 +5,8 @@
 # Gradle
 .gradle
 
-# Archive
-target/
+# Out
+out/
+
+# Log
+logs/
