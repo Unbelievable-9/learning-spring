@@ -1,4 +1,4 @@
-package info.unbelievable9.service;
+package info.unbelievable9.di;
 
 /**
  * Copyright 2017 (C) Unbelievable9
@@ -8,4 +8,6 @@ package info.unbelievable9.service;
 public interface Stage {
 
     void cheer();
+
+    Integer coinBonus();
 }

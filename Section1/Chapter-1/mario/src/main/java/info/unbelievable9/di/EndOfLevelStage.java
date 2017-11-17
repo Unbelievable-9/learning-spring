@@ -1,4 +1,4 @@
-package info.unbelievable9.service;
+package info.unbelievable9.di;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -22,6 +22,13 @@ public class EndOfLevelStage implements Stage {
 
     @Override
     public void cheer() {
-        printStream.println("That's so nice");
+        logger.trace("Mario Got a Coin!");
+
+        printStream.println("That's So Nice");
+    }
+
+    @Override
+    public Integer coinBonus() {
+        return 100;
     }
 }
