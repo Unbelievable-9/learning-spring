@@ -5,8 +5,9 @@
 # Gradle
 .gradle
 
-# Out
+# Build
 out/
+build/
 
 # Log
 logs/
