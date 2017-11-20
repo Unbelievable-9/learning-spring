@@ -18,7 +18,7 @@ public class MarioMain {
         logger.trace("Mario Starts Running!");
 
         AnnotationConfigApplicationContext configApplicationContext =
-                new AnnotationConfigApplicationContext("info.unbelievable9.config");
+                new AnnotationConfigApplicationContext("info.unbelievable9.info.unbelievable9.config");
 
         Mario mario = configApplicationContext.getBean(Mario.class);
         mario.cheerForStage();
