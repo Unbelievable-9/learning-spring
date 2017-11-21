@@ -2,10 +2,10 @@ apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'application'
 
-mainClassName = "info.unbelievable9.MarioMain"
+mainClassName = "info.unbelievable9.ComputerMain"
 
 jar {
-    baseName = 'mario'
+    baseName = 'computer-XML'
     version = '0.0.1-SNAPSHOT'
 }
 
