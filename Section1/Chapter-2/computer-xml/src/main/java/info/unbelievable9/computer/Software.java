@@ -1,4 +1,4 @@
-package info.unbelievable9.computer.bean;
+package info.unbelievable9.computer;
 
 /**
  * Copyright 2017 (C) Unbelievable9

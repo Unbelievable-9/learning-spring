@@ -5,5 +5,7 @@ package info.unbelievable9.computer;
  * Created on : 2017/11/21
  * Author     : Unbelievable9
  **/
-public interface OperationSystem {
+public interface SystemService {
+
+    void operation();
 }
