@@ -1,6 +1,5 @@
 package info.unbelievable9.test;
 
-import info.unbelievable9.computer.Software;
 import info.unbelievable9.computer.SystemService;
 import info.unbelievable9.computer.config.ComputerConfig;
 import org.junit.Assert;
@@ -19,21 +18,13 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  **/
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = ComputerConfig.class)
-public class SoftwareTest {
+public class ImportJavaConfigTest {
 
     @Rule
     public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 
     @Autowired
-    private Software software;
-
-    @Autowired
     private SystemService systemService;
-
-    @Test
-    public void softwareShouldNotBeNull() {
-        Assert.assertNotNull(software);
-    }
 
     @Test
     public void systemServiceShouldOperate() {

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="xyplorer"
+          class="info.unbelievable9.computer.bean.XYplorer"
+          c:_0="XYplorer"
+          c:_1="18.50.0300">
+        <constructor-arg>
+            <list>
+                <value>Fast, powerful, and easy to use.</value>
+                <value>Managing files in more than 100 countries.</value>
+                <value>Compatible with Windows XP, Vista, 7, 8, and 10.</value>
+            </list>
+        </constructor-arg>
+    </bean>
+</beans>
