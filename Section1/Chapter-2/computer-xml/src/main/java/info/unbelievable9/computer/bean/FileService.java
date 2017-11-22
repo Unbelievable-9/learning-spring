@@ -13,8 +13,7 @@ public class FileService implements SystemService {
 
     private Software software;
 
-    @Autowired(required = false)
-    public FileService(Software software) {
+    public void setSoftware(Software software) {
         this.software = software;
     }
 

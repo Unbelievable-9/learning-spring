@@ -2,11 +2,81 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
     <context:component-scan base-package="info.unbelievable9.computer.bean"/>
 
+    <!-- Spring Util Namespace -->
+    <!-- Create a Bean Named 'featureList' -->
+    <util:list id="featureList">
+        <value>Fast, powerful, and easy to use.</value>
+        <value>Managing files in more than 100 countries.</value>
+        <value>Compatible with Windows XP, Vista, 7, 8, and 10.</value>
+    </util:list>
+
     <bean id="fileExplorer" class="info.unbelievable9.computer.bean.FileExplorer"/>
-    <bean id="fileService" class="info.unbelievable9.computer.bean.FileService">
-        <constructor-arg ref="fileExplorer"/>
+
+    <!-- Constructor ID Can Set Object -->
+    <!--bean id="xyplorer" class="info.unbelievable9.computer.bean.BlankExplorer">
+        <constructor-arg value="XYplorer"/>
+        <constructor-arg value="18.50.0300"/>
+        <constructor-arg>
+            <list>
+                <value>Fast, powerful, and easy to use.</value>
+                <value>Managing files in more than 100 countries.</value>
+                <value>Compatible with Windows XP, Vista, 7, 8, and 10.</value>
+            </list>
+        </constructor-arg>
+    </bean-->
+
+    <!-- C-Namespace DI Cannot Inject Set Object Properly -->
+    <!--bean id="xyplorer" class="info.unbelievable9.computer.bean.BlankExplorer"
+          c:_0="XYplorer"
+          c:_1="18.50.0300"
+          c:_2=""/-->
+
+    <!-- Setter DI Can Inject Set Object -->
+    <!--bean id="xyplorer" class="info.unbelievable9.computer.bean.BlankExplorer">
+        <property name="name" value="XYplorer"/>
+        <property name="version" value="18.50.0300"/>
+        <property name="featureList">
+            <list>
+                <value>Fast, powerful, and easy to use.</value>
+                <value>Managing files in more than 100 countries.</value>
+                <value>Compatible with Windows XP, Vista, 7, 8, and 10.</value>
+            </list>
+        </property>
+    </bean-->
+
+    <!-- P-Namespace DI Cannot Inject Set Object -->
+    <bean id="xyplorer" class="info.unbelievable9.computer.bean.BlankExplorer"
+          p:name="XYplorer"
+          p:version="18.50.0300"
+          p:featureList-ref="featureList">
     </bean>
+
+
+    <!-- Constructor DI -->
+    <!--bean id="fileService" class="info.unbelievable9.computer.bean.FileService">
+        <constructor-arg ref="fileExplorer"/>
+    </bean-->
+
+    <!-- C-Namespace -->
+    <!--bean id="fileService" class="info.unbelievable9.computer.bean.FileService"
+          c:software-ref="xyplorer"/-->
+    <!--bean id="fileService" class="info.unbelievable9.computer.bean.FileService"
+          c:_0-ref="fileExplorer"/-->
+    <!--bean id="fileService" class="info.unbelievable9.computer.bean.FileService"
+          c:_-ref="fileExplorer"/-->
+
+    <!-- Setter DI -->
+    <!--bean id="fileService" class="info.unbelievable9.computer.bean.FileService">
+        <property name="software" ref="fileExplorer"/>
+    </bean-->
+
+    <!-- P-Namespace DI -->
+    <bean id="fileService" class="info.unbelievable9.computer.bean.FileService"
+          p:software-ref="xyplorer"/>
 </beans>

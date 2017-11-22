@@ -24,14 +24,22 @@ public class SoftwareTest {
     public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 
     @Autowired
-    private Software software;
+    private Software fileExplorer;
+
+    @Autowired
+    private Software xyplorer;
 
     @Autowired
     private SystemService systemService;
 
     @Test
-    public void softwareShouldNotBeNull() {
-        Assert.assertNotNull(software);
+    public void fileExplorerShouldNotBeNull() {
+        Assert.assertNotNull(fileExplorer);
+    }
+
+    @Test
+    public void xyplorerShouldNotBeNull() {
+        Assert.assertNotNull(xyplorer);
     }
 
     @Test
@@ -39,7 +47,10 @@ public class SoftwareTest {
         systemService.operation();
 
         Assert.assertEquals(
-                "File Explorer(1.0.0) is Loading.\n",
+                "XYplorer(18.50.0300) is Loading.\n" +
+                        "Fast, powerful, and easy to use.\n" +
+                        "Managing files in more than 100 countries.\n" +
+                        "Compatible with Windows XP, Vista, 7, 8, and 10.\n",
                 systemOutRule.getLog());
     }
 }
