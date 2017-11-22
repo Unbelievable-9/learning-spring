@@ -1,0 +1,40 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'application'
+
+mainClassName = "info.unbelievable9.ComputerMain"
+
+jar {
+    baseName = 'computer-auto'
+    version = '0.0.1-SNAPSHOT'
+}
+
+repositories {
+    maven { url "http://maven.aliyun.com/nexus/content/groups/public" }
+    maven { url "https://jitpack.io" }
+}
+
+ext {
+    springVersion = '4.3.12.RELEASE'
+    aspecjVersion = '1.8.13'
+    log4jVersion = '2.9.1'
+    junitVersion = '4.12'
+    systemRulesVersion = '.1.17.0'
+    mockitoVersion = '2.12.0'
+}
+
+dependencies {
+    compile group: 'org.springframework', name: 'spring-context', version: springVersion
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: log4jVersion
+    compile group: 'org.aspectj', name: 'aspectjweaver', version: aspecjVersion
+
+    testCompile group: 'org.springframework', name: 'spring-test', version: springVersion
+    testCompile group: 'junit', name: 'junit', version: junitVersion
+    testCompile group: 'org.mockito', name: 'mockito-core', version: mockitoVersion
+
+    testCompile 'com.github.stefanbirkner:system-rules:system-rules-1.17.0'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.3.1'
+}
