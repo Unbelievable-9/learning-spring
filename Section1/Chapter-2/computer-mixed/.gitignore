@@ -11,3 +11,6 @@ build/
 
 # Log
 logs/
+
+# MacOS
+.DS_Store
