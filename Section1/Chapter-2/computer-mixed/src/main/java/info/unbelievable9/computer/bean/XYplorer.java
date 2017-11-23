@@ -1,7 +1,6 @@
 package info.unbelievable9.computer.bean;
 
 import info.unbelievable9.computer.Software;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 
@@ -10,7 +9,6 @@ import java.util.List;
  * Created on : 2017/11/22
  * Author     : Unbelievable9
  **/
-@Component
 public class XYplorer implements Software {
 
     private String name;

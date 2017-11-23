@@ -10,12 +10,11 @@ import org.springframework.stereotype.Component;
  * Created on : 2017/11/22
  * Author     : Unbelievable9
  **/
-@Component
 public class FileService implements SystemService {
 
     private Software software;
 
-    @Autowired(required = false)
+    @Autowired
     public FileService(Software software) {
         this.software = software;
     }

@@ -1,6 +1,7 @@
-package info.unbelievable9.computer.config;
+package info.unbelievable9.computer.config.original;
 
 import info.unbelievable9.computer.Software;
+import info.unbelievable9.computer.SystemService;
 import info.unbelievable9.computer.bean.FileService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,10 +12,10 @@ import org.springframework.context.annotation.Configuration;
  * Author     : Unbelievable9
  **/
 @Configuration
-public class FileServiceConfig {
+public class SystemServiceConfig {
 
     @Bean
-    public FileService fileService(Software software) {
-        return new FileService(software);
+    public SystemService fileService(Software xyplorer) {
+        return new FileService(xyplorer);
     }
 }

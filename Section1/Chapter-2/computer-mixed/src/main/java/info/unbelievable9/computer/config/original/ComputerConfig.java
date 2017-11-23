@@ -1,4 +1,4 @@
-package info.unbelievable9.computer.config;
+package info.unbelievable9.computer.config.original;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ImportResource;
  * Author     : Unbelievable9
  **/
 @Configuration
-@Import(FileServiceConfig.class)
-@ImportResource("classpath:config/software-config.xml")
+@Import(SystemServiceConfig.class)
+@ImportResource(value = "classpath:config/reference/software-config.xml")
 public class ComputerConfig {
 }

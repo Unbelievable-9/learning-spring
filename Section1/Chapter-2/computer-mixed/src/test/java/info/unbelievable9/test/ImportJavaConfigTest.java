@@ -1,7 +1,7 @@
 package info.unbelievable9.test;
 
 import info.unbelievable9.computer.SystemService;
-import info.unbelievable9.computer.config.ComputerConfig;
+import info.unbelievable9.computer.config.original.ComputerConfig;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
@@ -17,7 +17,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * Author     : Unbelievable9
  **/
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = ComputerConfig.class)
+@ContextConfiguration(locations = "classpath:config/original/computer-config.xml")
 public class ImportJavaConfigTest {
 
     @Rule

@@ -1,7 +1,7 @@
 package info.unbelievable9.test;
 
 import info.unbelievable9.computer.SystemService;
-import info.unbelievable9.computer.config.ComputerConfig;
+import info.unbelievable9.computer.config.original.ComputerConfig;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
@@ -31,7 +31,10 @@ public class ImportXmlConfigTest {
         systemService.operation();
 
         Assert.assertEquals(
-                "File Explorer(1.0.0) is Loading.\n",
+                "XYplorer(18.50.0300) is Loading.\n" +
+                        "Fast, powerful, and easy to use.\n" +
+                        "Managing files in more than 100 countries.\n" +
+                        "Compatible with Windows XP, Vista, 7, 8, and 10.\n",
                 systemOutRule.getLog());
     }
 }

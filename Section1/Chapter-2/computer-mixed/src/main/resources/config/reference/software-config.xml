@@ -3,6 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:c="http://www.springframework.org/schema/c"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
     <bean id="xyplorer"
           class="info.unbelievable9.computer.bean.XYplorer"
           c:_0="XYplorer"
@@ -15,4 +16,5 @@
             </list>
         </constructor-arg>
     </bean>
+
 </beans>
