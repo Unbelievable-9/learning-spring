@@ -2,6 +2,7 @@ package info.unbelievable9.conditional.test;
 
 import info.unbelievable9.conditional.config.ConditionConfig;
 import org.junit.Assert;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,12 +19,13 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(classes = ConditionConfig.class)
 public class LockScreenTest {
 
-    static {
-        System.setProperty("phone_locked", "false");
-    }
-
     @Autowired
     private ApplicationContext applicationContext;
+
+    @BeforeClass
+    public static void before() {
+        System.setProperty("phone_locked", "true");
+    }
 
     @Test
     public void shouldCreateBean() {
